@@ -12,16 +12,7 @@ mongoose.connect(
 );
 requireDir('./src/models');
 
-const Product = mongoose.model("Product");
-
-//Criando rotas
-app.get('/', (req, res) => {
-    Product.create({
-        title: "ReactJs",
-        description: "Build powerful sites with React",
-        url: "http://github.com/facebook/react-native"
-    });
-    return res.send('Hello nodemon');
-});
+//
+app.use("/api", require("./src/routes"));
 
 app.listen(3333);
