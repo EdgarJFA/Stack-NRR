@@ -1,9 +1,14 @@
+
 import Header from './components/Header';
+import Main from './pages/main';
 import './global.css';
 
 const App = () => {
   return (
-    <Header/>
+    <div className="App">
+      <Header/>
+      <Main/>
+    </div>
   );
 }
 
